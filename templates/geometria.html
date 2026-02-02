@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<h1>Perímetro e Área</h1>
+
+<div class="calculos">
+    <div class="card d-flex">
+        <h2>Perímetro Triângulo</h2>
+        <form class="form-triangulo" action="{{ url_for('triangulo_perimetro') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if perimetro is defined %}
+                {{ n1 }} + {{ n1 }} + {{ n1 }} = {{ perimetro }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Perímetro</button>
+        </form>
+    </div>
+    <div class="card d-flex">
+        <h2>Área Triângulo</h2>
+        <form class="form-triangulo" action="{{ url_for('triangulo_area') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if area is defined %}
+                {{ n1 }} * {{ n1 }} / 2 = {{ area }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Área</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Perímetro Circulo</h2>
+        <form class="form-circulo" action="{{ url_for('circulo_perimetro') }}" method="post">
+            <label>
+                <input placeholder="Digite o raio" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if perimetro2 is defined %}
+                2 * 3,14 * {{ n1 }} = {{ perimetro2 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Perímetro</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Área Circulo</h2>
+        <form class="form-circulo" action="{{ url_for('circulo_area') }}" method="post">
+            <label>
+                <input placeholder="Digite o raio" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if area2 is defined %}
+                3,14 * {{ n1 }} ** 2 = {{ area2 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Área</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Perímetro Quadrado</h2>
+        <form class="form-quadrado" action="{{ url_for('quadrado_perimetro') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if perimetro3 is defined %}
+                {{ n1 }} + {{ n1 }} +{{ n1 }} +{{ n1 }} = {{ perimetro3 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Perímetro</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Área Quadrado</h2>
+        <form class="form-quadrado" action="{{ url_for('quadrado_area') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if area3 is defined %}
+                {{ n1 }} * {{ n1 }} = {{ area3 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Área</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Perímetro Hexágono</h2>
+        <form class="form-hexagono" action="{{ url_for('hexagono_perimetro') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if perimetro4 is defined %}
+                {{ n1 }} + {{ n1 }} +{{ n1 }} + {{ n1 }} + {{ n1 }} + {{ n1 }} = {{ perimetro4 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Perímetro</button>
+        </form>
+    </div>
+
+    <div class="card d-flex">
+        <h2>Área Hexágono</h2>
+        <form class="form-hexagono" action="{{ url_for('hexagono_area') }}" method="post">
+            <label>
+                <input placeholder="Digite o lado" name="form-n1" class="form-control">
+            </label>
+
+            <p class="resultado">
+                {% if area4 is defined %}
+                (({{ n1 }}* {{ n1 }}) / 2) * 6 = {{ area4 }}
+                {% else %}
+                {% endif %}
+            </p>
+
+            <button type="submit" class="btn btn-info">Área</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
