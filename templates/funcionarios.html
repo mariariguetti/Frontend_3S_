@@ -33,28 +33,28 @@
                         aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="form-triangulo" action="{{ url_for('cadastro_funcionario') }}" method="post">
+                <form id="form-funcionarios" class="form-funcionarios" action="{{ url_for('cadastro_funcionario') }}" method="post">
 
                     <label>
-                        <input placeholder="Digite o nome" name="form-nome" class="form-control">
+                        <input id="input-nome2" placeholder="Digite o nome" name="form-nome" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite a data de nascimento" name="form-nascimento" class="form-control">
+                        <input id="input-nascimento2" placeholder="Digite a data de nascimento" name="form-nascimento" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite o CPF" name="form-cpf" class="form-control">
+                        <input id="input-cpf3" placeholder="Digite o CPF" name="form-cpf" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite o email" name="form-email" class="form-control">
+                        <input id="input-email2" placeholder="Digite o email" name="form-email" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite a senha" name="form-senha" class="form-control">
+                        <input id="input-senha3" placeholder="Digite a senha" name="form-senha" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite o cargo" name="form-cargo" class="form-control">
+                        <input id="input-cargo2" placeholder="Digite o cargo" name="form-cargo" class="form-control">
                     </label>
                     <label>
-                        <input placeholder="Digite o salário" name="form-salario" class="form-control">
+                        <input id="input-salario2" placeholder="Digite o salário" name="form-salario" class="form-control">
                     </label>
 
 
@@ -62,13 +62,12 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button href="{{ url_for('home') }}" type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Fechar
-                </button>
+                <button href="{{ url_for('home') }}" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>
 </div>
+
 <table class="table">
     <thead>
     <tr>
