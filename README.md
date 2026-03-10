@@ -27,3 +27,8 @@
 ## Funcionários
 
 <img width="1908" height="904" alt="image" src="https://github.com/user-attachments/assets/ef23a430-9454-4e5b-b837-9f258bb8e50e" />
+
+## Animais
+
+<img width="1904" height="913" alt="image" src="https://github.com/user-attachments/assets/84f7dbca-3d9c-4dbf-bbb2-8186ea1d6e65" />
+
