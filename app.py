@@ -4,6 +4,7 @@ from flask_login import LoginManager, current_user, login_required, login_user, 
 from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
 
+from api_routes import routes
 from database import db_session, Funcionario
 
 app = Flask(__name__)
@@ -295,6 +296,15 @@ def cadastro_funcionario():
 @app.route('/animais')
 def animais():
     return render_template('animais.html')
+
+@app.route('/gatos')
+def listar_gatos():
+    gatos = routes.get_gatos()
+
+    for gato in gatos:
+        gato["temperament"] = gato["temperament"].split(',')
+        gato["image"] = routes.get_image()["url"]
+    return render_template('gatos.html', gatos=gatos)
 
 if __name__ == '__main__':
     app.run(debug=True)

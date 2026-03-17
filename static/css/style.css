@@ -200,3 +200,91 @@ h1 {
     font-size: 4rem;
     user-select: none;
 }
+
+body {
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+}
+
+.bg-primary-custom {
+    background-color: #4c7fe6 !important;
+}
+
+.text-primary-custom {
+    color: #4c7fe6 !important;
+}
+
+.btn-primary-custom {
+    background-color: #4c7fe6;
+    border-color: #4c7fe6;
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background-color: #3b66c4;
+    border-color: #3b66c4;
+    color: white;
+}
+
+.rounded-theme {
+    border-radius: 8px !important;
+}
+
+.breed-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.breed-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-top-header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.progress {
+    height: 6px;
+    background-color: #f1f5f9;
+}
+
+.progress-bar {
+    background-color: #4c7fe6;
+}
+
+.fact-box {
+    background-color: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.fact-label {
+    display: block;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.fact-value {
+    font-weight: 700;
+    color: #1e293b;
+    font-size: 0.875rem;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

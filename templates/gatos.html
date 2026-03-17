@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="d-flex flex-column gap-4" id="breed-grid">
+    {% if gatos %}
+        {% for gato in gatos %}
+            <!--Breed Card-->
+            <article class="card breed-card rounded-theme overflow-hidden border-0" data-purpose="breed-card">
+        <div class="row g-0">
+            <div class="col-md-4 col-lg-3">
+                <img alt="Abyssinian Cat" class="img-fluid h-100 w-100 object-fit-cover"
+                     src="{{ gato.image }}"
+                     style="min-height: 250px;"/>
+            </div>
+            <div class="col-md-8 col-lg-9 p-4 p-md-5 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h2 class="h3 fw-bold m-0">{{ gato.name }}</h2>
+                        <span class="badge bg-info-subtle text-primary-custom px-3 py-2 rounded-theme">Origin: {{ gato.origin }}</span>
+                    </div>
+                    <p class="text-muted mb-4">
+                       Description: {{ gato.description }}
+                    </p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="fact-box">
+                                        <span class="fact-label">Life Span</span>
+                                        <span class="fact-value">{{ gato.life_span }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="fact-box">
+                                        <span class="fact-label">Weight:</span>
+                                        <span class="fact-value">{{ gato.weight.imperial }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-purpose="breed-traits">
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between small fw-bold mb-1">
+                                    <span>Adaptability:</span>
+                                    <span>{{ gato.adaptability }}</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-end mt-auto">
+                    <a class="btn btn-primary-custom px-5 py-2 rounded-theme fw-semibold"
+                       href="https://en.wikipedia.org/wiki/Abyssinian_cat" target="_blank">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+    {% else %}
+    <h3>Nenhum gato</h3>
+    {% endif %}
+</div>
+
+{% endblock %}
